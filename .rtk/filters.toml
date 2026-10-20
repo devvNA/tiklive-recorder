@@ -1,0 +1,28 @@
+# Project-local RTK filters — commit this file with your repo.
+# Filters here override user-global and built-in filters.
+# Docs: https://github.com/rtk-ai/rtk#custom-filters
+schema_version = 1
+
+[filters.uv-sync]
+description = "Compact uv sync and package install noise"
+match_command = "^uv\\s+(sync|run)"
+strip_ansi = true
+strip_lines_matching = [
+    "^warning: Failed to hardlink",
+    "^\\s+If the cache and target",
+    "^\\s+If this is intentional",
+    "^\\s*\\+\\s+[a-zA-Z0-9_-]+==",
+]
+max_lines = 40
+
+[filters.tiktok-banner]
+description = "Compact ASCII banner from CLI executions"
+match_command = ".*main\\.py.*"
+strip_ansi = true
+strip_lines_matching = [
+    "^\\s*_____",
+    "^\\s*\\|_[^\\n]*",
+    "^\\s*\\|\\s+\\|[^\\n]*",
+    "^\\s*\\|_\\|[^\\n]*",
+]
+max_lines = 50

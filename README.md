@@ -13,7 +13,7 @@ _TikTok Live Recorder is a tool for recording live streaming TikTok._
 
 The TikTok Live Recorder is a tool designed to easily capture and save live streaming sessions from TikTok. It records both audio and video, allowing users to revisit and preserve engaging live content for later enjoyment and analysis. It's a valuable resource for creators, researchers, and anyone who wants to capture memorable moments from TikTok live streams.
 
-![preview](https://i.ibb.co/YTHp5DT/image.png)
+![preview](Screenshot_6.png)
 
 </div>
 
@@ -111,7 +111,7 @@ uv run python src/main.py [options]
 ### Options
 
 | Flag | Description |
-|------|-------------|
+| ------ | ------------- |
 | `-user <USERNAME>` | Username(s) to record. Separate multiple with commas. |
 | `-url <URL>` | TikTok live URL to record from. |
 | `-room_id <ROOM_ID>` | Room ID to record from. |
@@ -126,7 +126,7 @@ uv run python src/main.py [options]
 
 ### Recording Modes
 
-- **`manual`** *(default)*: Records immediately if the user is currently live.
+- **`manual`** _(default)_: Records immediately if the user is currently live.
 - **`automatic`**: Polls at regular intervals and records whenever the user goes live.
 - **`followers`**: Automatically records live streams from all followed users.
 
